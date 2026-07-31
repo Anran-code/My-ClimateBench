@@ -70,6 +70,33 @@ pip install esem[gpflow,keras,scikit-learn] eofs
 
 后续我会根据自己的复现实验补充更完整的环境配置说明、运行顺序和注意事项。
 
+## Data Setup
+
+本仓库默认不直接上传 `ClimateBench` 数据文件到 GitHub。复现实验前，需要先手动下载并配置本地数据目录。
+
+- 数据来源：[Zenodo 10.5281/zenodo.5196512](https://doi.org/10.5281/zenodo.5196512)
+- 建议下载文件：`train_val.tar.gz`、`test.tar.gz`
+- 建议解压目录：`D:\My-ClimateBench\data`
+
+解压后，本地 `data/` 目录下应至少包含类似文件：
+
+```text
+data/
+├─ inputs_historical.nc
+├─ inputs_ssp245.nc
+├─ outputs_historical.nc
+├─ outputs_ssp245.nc
+└─ ...
+```
+
+当前仓库中的 [utils.py](file:///D:/My-ClimateBench/baseline_models/utils.py#L1-L6) 已将数据路径配置为：
+
+```python
+data_path = "D:/My-ClimateBench/data/"
+```
+
+如果后续在其他电脑或其他目录运行，需要同步修改该路径配置。
+
 ## Progress
 
 当前已完成或正在进行的工作：
