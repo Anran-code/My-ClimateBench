@@ -36,6 +36,7 @@
 .
 ├─ analysis_notebooks/   # 论文图表、综合评价、CMIP6 对比分析
 ├─ baseline_models/      # 各类 baseline notebook 与公共工具
+├─ docs/                 # 实习过程文档、周报与阶段性记录
 ├─ prepare_data.py       # 原始 NorESM2 输出整理脚本
 ├─ prep_input_data.ipynb # benchmark 输入输出构造脚本
 ├─ inputs_NorESM2_ERF.csv
