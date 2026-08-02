@@ -1,3 +1,12 @@
+from pathlib import Path
+import sys
+
+
+# Ensure the project root is on sys.path when this script is run directly.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 from baseline_models.utils import create_predictor_data, create_predictdand_data
 
 
