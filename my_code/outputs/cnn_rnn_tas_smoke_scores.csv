@@ -1,0 +1,3 @@
+model,rmse_late_35plus
+CNN_tas_smoke,0.9900786205096594
+RNN_tas_smoke,0.553616374655207
